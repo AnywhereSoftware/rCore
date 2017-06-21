@@ -17,7 +17,7 @@ typedef unsigned int B4R_VAARGS_UINT;
 #if !defined(_NEW)
 extern void *operator new( size_t size, void *ptr );
 #endif
-//~version: 1.80
+//~version: 2.00
 namespace B4R {
 	//numeric types < 20
 	#define BR_BYTE 1
@@ -96,9 +96,7 @@ namespace B4R {
 		Object* wrapNumber(double d);
 		Object* wrapPointer(void* p);
 		Object* wrapPointer(const char* c);
-#ifndef ESP32
 		Object* wrapPointer(const __FlashStringHelper* f);
-#endif
 		bool equals(Object* o);
 		Long toLong();
 		ULong toULong();

@@ -13,13 +13,12 @@ namespace B4R {
 		return this;
 	}
 		
-#ifndef ESP32
 	Object* Object::wrapPointer(const __FlashStringHelper* p) {
 		this->data.PointerField = (void*)p;
 		this->type = BR_F_STRING;
 		return this;
 	}
-#endif
+	
 	bool Object::equals(Object* o) {
 		if (o == NULL)
 			return false;
